@@ -190,8 +190,8 @@
 		07B3A8481495044C00029FE0 /* Head.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B3A8471495044C00029FE0 /* Head.mm */; };
 		07B3A84B149508BB00029FE0 /* Arms.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B3A84A149508BB00029FE0 /* Arms.mm */; };
 		07B3A84E1495116000029FE0 /* Brain.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B3A84D1495116000029FE0 /* Brain.mm */; };
-		07B3A8521495160F00029FE0 /* Neuron.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B3A8511495160F00029FE0 /* Neuron.mm */; };
 		07B3A8551495194400029FE0 /* BooleanNeuron.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B3A8541495194400029FE0 /* BooleanNeuron.mm */; };
+		07B3A85714951F2E00029FE0 /* Neuron.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B3A85614951F2E00029FE0 /* Neuron.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -565,8 +565,8 @@
 		07B3A84D1495116000029FE0 /* Brain.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Brain.mm; sourceTree = "<group>"; };
 		07B3A84F149512B500029FE0 /* Neuron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Neuron.h; sourceTree = "<group>"; };
 		07B3A8501495151F00029FE0 /* BooleanNeuron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooleanNeuron.h; sourceTree = "<group>"; };
-		07B3A8511495160F00029FE0 /* Neuron.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Neuron.mm; path = ../Neuron.mm; sourceTree = "<group>"; };
 		07B3A8541495194400029FE0 /* BooleanNeuron.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BooleanNeuron.mm; sourceTree = "<group>"; };
+		07B3A85614951F2E00029FE0 /* Neuron.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Neuron.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -644,7 +644,7 @@
 				07B3A84C149510EC00029FE0 /* Brain.h */,
 				07B3A84D1495116000029FE0 /* Brain.mm */,
 				07B3A84F149512B500029FE0 /* Neuron.h */,
-				07B3A8511495160F00029FE0 /* Neuron.mm */,
+				07B3A85614951F2E00029FE0 /* Neuron.mm */,
 				07B3A8501495151F00029FE0 /* BooleanNeuron.h */,
 				07B3A8541495194400029FE0 /* BooleanNeuron.mm */,
 			);
@@ -1498,8 +1498,8 @@
 				07B3A8481495044C00029FE0 /* Head.mm in Sources */,
 				07B3A84B149508BB00029FE0 /* Arms.mm in Sources */,
 				07B3A84E1495116000029FE0 /* Brain.mm in Sources */,
-				07B3A8521495160F00029FE0 /* Neuron.mm in Sources */,
 				07B3A8551495194400029FE0 /* BooleanNeuron.mm in Sources */,
+				07B3A85714951F2E00029FE0 /* Neuron.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
