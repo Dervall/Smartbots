@@ -12,6 +12,7 @@
 #include "Body.h"
 #include "Head.h"
 #include "Arms.h"
+#include "World.h"
 
 @implementation WorldView
 
@@ -20,8 +21,10 @@
 	if ((self = [super init])) {
 
 		// Translate the camera.
-		[self.camera setPosition:iv3(0, 2, 3)];
+		[self.camera setPosition:iv3(0, 2, 7)];
 
+        World& rWorld = World::GetInstance();
+        
         // Create a bitchin' robot
         Isgl3dNode* pNode = [self.scene createNode];
         m_pRobot = new Robot(pNode);
@@ -29,6 +32,21 @@
         m_pRobot->SetHead(new Head());
         m_pRobot->SetArms(new Arms());
         m_pRobot->LoadGeometry();
+        m_pRobot->SetType(Actor::FRIENDLY);
+        
+        rWorld.AddActor(m_pRobot);
+        
+        pNode = [self.scene createNode];
+        Robot* pEvilRobot = new Robot(pNode);
+        pEvilRobot->SetBody(new Body());
+        pEvilRobot->SetHead(new Head());
+        pEvilRobot->SetArms(new Arms());
+        pEvilRobot->LoadGeometry();
+        pEvilRobot->SetType(Actor::HOSTILE);
+        pEvilRobot->GetPosition().x = 1.0f;
+        pEvilRobot->GetPosition().z = -8.0f;
+        
+        rWorld.AddActor(pEvilRobot);
         
 		[self schedule:@selector(tick:)];
 	}
@@ -43,7 +61,7 @@
 
 - (void) tick:(float)dt {
 	// Rotate the text around the y axis
-	m_pRobot->Tic(dt);
+    World::GetInstance().Tic(dt);
 }
 
 
