@@ -9,7 +9,7 @@
 
 #import "SmartbotsAppDelegate.h"
 #import "Isgl3dViewController.h"
-#import "HelloWorldView.h"
+#import "WorldView.h"
 #import "Isgl3d.h"
 
 @implementation SmartbotsAppDelegate
@@ -45,7 +45,7 @@
 	[Isgl3dDirector sharedInstance].allowedAutoRotations = Isgl3dAllowedAutoRotationsLandscapeOnly;
 	
 	// Enable retina display : uncomment if desired
-//	[[Isgl3dDirector sharedInstance] enableRetinaDisplay:YES];
+	[[Isgl3dDirector sharedInstance] enableRetinaDisplay:YES];
 
 	// Enables anti aliasing (MSAA) : uncomment if desired (note may not be available on all devices and can have performance cost)
 //	[Isgl3dDirector sharedInstance].antiAliasingEnabled = YES;
@@ -61,7 +61,7 @@
 	[_window makeKeyAndVisible];
 
 	// Creates the view(s) and adds them to the director
-	[[Isgl3dDirector sharedInstance] addView:[HelloWorldView view]];
+	[[Isgl3dDirector sharedInstance] addView:[WorldView view]];
 	
 	// Run the director
 	[[Isgl3dDirector sharedInstance] run];
