@@ -15,12 +15,14 @@ BooleanNeuron::BooleanNeuron() : m_pFalse(NULL), m_pTrue(NULL)
 
 BooleanNeuron::~BooleanNeuron() 
 {
-    if (m_pFalse) {
+    if (m_pFalse) 
+    {
         delete m_pFalse;
         m_pFalse = NULL;
     }
     
-    if (m_pTrue) {
+    if (m_pTrue) 
+    {
         delete m_pTrue;
         m_pTrue = NULL;
     }
@@ -28,7 +30,8 @@ BooleanNeuron::~BooleanNeuron()
 
 void BooleanNeuron::SetTrueChild(Neuron* pTrue) 
 {
-    if (m_pTrue) {
+    if (m_pTrue) 
+    {
         delete m_pTrue;
         m_pTrue = pTrue;
     }
@@ -36,7 +39,8 @@ void BooleanNeuron::SetTrueChild(Neuron* pTrue)
 
 void BooleanNeuron::SetFalseChild(Neuron* pFalse)
 {
-    if (m_pFalse) {
+    if (m_pFalse) 
+    {
         delete m_pFalse;
         m_pFalse = pFalse;
     }
