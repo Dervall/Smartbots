@@ -12,7 +12,6 @@
 
 Brain::Brain() 
     : m_pRootNeuron(NULL)
-    , m_pLastFiredNeuron(NULL)
 {
 }
 
@@ -22,6 +21,9 @@ Brain::~Brain() {
     }
 }
 
-void Tic(float dt) {
-
+void Brain::Tic(Robot* pRobot, float dt) {
+    if (m_pRootNeuron)
+    {
+        m_pRootNeuron->Fire(pRobot, dt);
+    }
 }

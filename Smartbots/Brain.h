@@ -10,6 +10,7 @@
 #define Smartbots_Brain_h
 
 class Neuron;
+class Robot;
 
 class Brain 
 {
@@ -17,11 +18,10 @@ public:
     Brain();
     ~Brain();
     
-    void Tic(float dt);
+    void Tic(Robot* pRobot, float dt);
     
 private:
     Neuron* m_pRootNeuron;
-    Neuron* m_pLastFiredNeuron;
 
 };
 

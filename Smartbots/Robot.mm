@@ -18,8 +18,9 @@ Robot::Robot(Isgl3dNode* pNode)
     , m_pBrain(NULL)
     , m_pBody(NULL)
     , m_pArms(NULL) 
-    , m_pHead(NULL) {
-    
+    , m_pHead(NULL)
+    , m_pTarget(NULL)
+{    
 }
 
 Robot::~Robot() {
@@ -31,6 +32,16 @@ Robot::~Robot() {
         delete m_pHead;
         m_pHead = NULL;
     }
+}
+
+bool Robot::IsTargettable() const
+{
+    return true;
+}
+
+void Robot::SetTarget(Actor *pTarget)
+{
+    m_pTarget = pTarget;
 }
 
 void Robot::Tic(float dt) {

@@ -14,20 +14,34 @@
 
 #import "isgl3d.h"
 
-class Actor 
+class Actor
 {
 public:
+    enum Type
+    {
+        FRIENDLY,
+        HOSTILE,
+        NEUTRAL
+    };
+    
     Actor (Isgl3dNode * pNode);
     ~Actor();
     
     virtual void Tic(float dt);
+    virtual bool IsTargettable() const;
+    
+    Type GetType() const;
+    void SetType(Type type);
+    
+    inline const Isgl3dVector3& GetPosition() const { return m_Position; }
+    inline Isgl3dVector3& GetPosition() { return m_Position; }
+    
     
 protected:
-    float m_fPositionX;
-    float m_fPositionY;
-    float m_fPositionZ;
+    Isgl3dVector3 m_Position;
     
     float m_fDirection;
+    Type m_Type;
     
     Isgl3dNode* m_pNode;
 };

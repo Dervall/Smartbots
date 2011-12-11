@@ -192,6 +192,10 @@
 		07B3A84E1495116000029FE0 /* Brain.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B3A84D1495116000029FE0 /* Brain.mm */; };
 		07B3A8551495194400029FE0 /* BooleanNeuron.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B3A8541495194400029FE0 /* BooleanNeuron.mm */; };
 		07B3A85714951F2E00029FE0 /* Neuron.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B3A85614951F2E00029FE0 /* Neuron.mm */; };
+		07B3A85D1495348800029FE0 /* FindTargetNeuron.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B3A85C1495348800029FE0 /* FindTargetNeuron.mm */; };
+		07B3A8611495386300029FE0 /* ClosestTargetFinder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B3A8601495386300029FE0 /* ClosestTargetFinder.mm */; };
+		07B3A863149539FD00029FE0 /* TargetFinder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B3A862149539FC00029FE0 /* TargetFinder.mm */; };
+		07B3A86614953CB500029FE0 /* World.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07B3A86514953CB500029FE0 /* World.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -567,6 +571,15 @@
 		07B3A8501495151F00029FE0 /* BooleanNeuron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooleanNeuron.h; sourceTree = "<group>"; };
 		07B3A8541495194400029FE0 /* BooleanNeuron.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BooleanNeuron.mm; sourceTree = "<group>"; };
 		07B3A85614951F2E00029FE0 /* Neuron.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Neuron.mm; sourceTree = "<group>"; };
+		07B3A8591495265F00029FE0 /* DistanceToNeuron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceToNeuron.h; sourceTree = "<group>"; };
+		07B3A85A1495321900029FE0 /* FindTargetNeuron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindTargetNeuron.h; sourceTree = "<group>"; };
+		07B3A85B149533E200029FE0 /* TargetFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetFinder.h; sourceTree = "<group>"; };
+		07B3A85C1495348800029FE0 /* FindTargetNeuron.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FindTargetNeuron.mm; sourceTree = "<group>"; };
+		07B3A85F149537EC00029FE0 /* ClosestTargetFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClosestTargetFinder.h; sourceTree = "<group>"; };
+		07B3A8601495386300029FE0 /* ClosestTargetFinder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ClosestTargetFinder.mm; sourceTree = "<group>"; };
+		07B3A862149539FC00029FE0 /* TargetFinder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TargetFinder.mm; sourceTree = "<group>"; };
+		07B3A86414953C1F00029FE0 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
+		07B3A86514953CB500029FE0 /* World.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = World.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -647,6 +660,15 @@
 				07B3A85614951F2E00029FE0 /* Neuron.mm */,
 				07B3A8501495151F00029FE0 /* BooleanNeuron.h */,
 				07B3A8541495194400029FE0 /* BooleanNeuron.mm */,
+				07B3A8591495265F00029FE0 /* DistanceToNeuron.h */,
+				07B3A85A1495321900029FE0 /* FindTargetNeuron.h */,
+				07B3A85B149533E200029FE0 /* TargetFinder.h */,
+				07B3A85C1495348800029FE0 /* FindTargetNeuron.mm */,
+				07B3A85F149537EC00029FE0 /* ClosestTargetFinder.h */,
+				07B3A8601495386300029FE0 /* ClosestTargetFinder.mm */,
+				07B3A862149539FC00029FE0 /* TargetFinder.mm */,
+				07B3A86414953C1F00029FE0 /* World.h */,
+				07B3A86514953CB500029FE0 /* World.mm */,
 			);
 			path = Smartbots;
 			sourceTree = "<group>";
@@ -1500,6 +1522,10 @@
 				07B3A84E1495116000029FE0 /* Brain.mm in Sources */,
 				07B3A8551495194400029FE0 /* BooleanNeuron.mm in Sources */,
 				07B3A85714951F2E00029FE0 /* Neuron.mm in Sources */,
+				07B3A85D1495348800029FE0 /* FindTargetNeuron.mm in Sources */,
+				07B3A8611495386300029FE0 /* ClosestTargetFinder.mm in Sources */,
+				07B3A863149539FD00029FE0 /* TargetFinder.mm in Sources */,
+				07B3A86614953CB500029FE0 /* World.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

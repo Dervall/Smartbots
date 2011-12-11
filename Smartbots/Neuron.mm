@@ -17,11 +17,6 @@ Neuron::~Neuron()
 {
 }
 
-Neuron* Neuron::Evaluate(Robot* pRobot)
-{
-    return this;
-}
-
-void Neuron::Tic(float dt)
+void Neuron::Fire(Robot* pRobot, float dt)
 {
 }

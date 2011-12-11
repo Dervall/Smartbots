@@ -17,7 +17,7 @@ class Head;
 class Arms;
 class Brain;
 
-class Robot : Actor
+class Robot : public Actor
 {
 public:
     Robot(Isgl3dNode* pNode);
@@ -31,11 +31,16 @@ public:
     
     void LoadGeometry();
     
+    virtual bool IsTargettable() const;
+    void SetTarget(Actor* pTarget);
+    
 private:
     Brain* m_pBrain;
     Body* m_pBody;
     Head* m_pHead;
     Arms* m_pArms;
+    
+    Actor* m_pTarget;
 };
 
 #endif

@@ -46,14 +46,20 @@ void BooleanNeuron::SetFalseChild(Neuron* pFalse)
     }
 }
 
-Neuron* BooleanNeuron::Evaluate(Robot *pRobot) 
+void BooleanNeuron::Fire(Robot *pRobot, float dt) 
 {
     if (EvaluateCondition(pRobot))
     {
-        return m_pTrue;
+        if (m_pTrue) 
+        {
+            m_pTrue->Fire(pRobot, dt);
+        }
     }
     else
     {
-        return m_pFalse;
+        if (m_pFalse)
+        {
+            m_pFalse->Fire(pRobot, dt);
+        }
     }
 }

@@ -18,7 +18,7 @@ public:
     BooleanNeuron();
     virtual ~BooleanNeuron();
     
-    virtual Neuron* Evaluate(Robot* pRobot);
+    virtual void Fire(Robot* pRobot, float dt);
     
     void SetTrueChild(Neuron* pTrue);
     void SetFalseChild(Neuron* pFalse);

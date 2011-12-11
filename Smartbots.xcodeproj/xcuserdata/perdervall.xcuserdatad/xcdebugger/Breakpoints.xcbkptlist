@@ -64,13 +64,55 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "Smartbots/Robot.mm"
-         timestampString = "345312892.541178"
+         filePath = "Smartbots/ClosestTargetFinder.h"
+         timestampString = "345323818.797794"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "22"
-         endingLineNumber = "22"
-         landmarkName = "Robot::Robot(Isgl3dNode* pNode)"
+         startingLineNumber = "18"
+         endingLineNumber = "18"
+         landmarkName = "class ClosestTargetFinder"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Smartbots/World.mm"
+         timestampString = "345325238.217819"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "35"
+         endingLineNumber = "35"
+         landmarkName = "World::Tic(float dt)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Smartbots/ClosestTargetFinder.mm"
+         timestampString = "345326567.927386"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "19"
+         endingLineNumber = "19"
+         landmarkName = "ClosestTargetFinder::FindTarget(Robot *pRobot)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Smartbots/ClosestTargetFinder.mm"
+         timestampString = "345326808.043749"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "26"
+         endingLineNumber = "26"
+         landmarkName = "ClosestTargetFinder::FindTarget(Robot *pRobot)"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
