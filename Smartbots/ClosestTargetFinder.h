@@ -11,7 +11,7 @@
 
 #include "TargetFinder.h"
 
-class ClosestTargetFinder : TargetFinder
+class ClosestTargetFinder : public TargetFinder
 {
 public:
     ClosestTargetFinder(Actor::Type typeToFind);

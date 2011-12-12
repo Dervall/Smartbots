@@ -18,7 +18,7 @@ public:
     Neuron();
     virtual ~Neuron();
     
-    void Fire(Robot* pRobot, float dt);
+    virtual void Fire(Robot* pRobot);
     
 };
 

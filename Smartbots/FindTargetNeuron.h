@@ -14,13 +14,14 @@
 class TargetFinder;
 class Robot;
 
-class FindTargetNeuron : Neuron {
+class FindTargetNeuron : public Neuron {
 public:
     FindTargetNeuron();
+    FindTargetNeuron(TargetFinder* pFinder);
     
     void SetTargetFinder(TargetFinder* pFinder);
     
-    virtual void Fire(Robot* pRobot, float dt);
+    virtual void Fire(Robot* pRobot);
     
 private:
     TargetFinder* m_pFinder;

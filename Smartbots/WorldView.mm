@@ -13,6 +13,13 @@
 #include "Head.h"
 #include "Arms.h"
 #include "World.h"
+#include "Brain.h"
+#include "HasTargetNeuron.h"
+#include "FindTargetNeuron.h"
+#include "ClosestTargetFinder.h"
+#include "DistanceToTargetGreaterNeuron.h"
+#include "MoveToTargetNeuron.h"
+#include "FireNeuron.h"
 
 @implementation WorldView
 
@@ -33,6 +40,24 @@
         m_pRobot->SetArms(new Arms());
         m_pRobot->LoadGeometry();
         m_pRobot->SetType(Actor::FRIENDLY);
+        
+        // Program the brain to move the robot towards the evil robot and fire once its
+        // close enough
+        Brain* pBrain = new Brain();
+        
+        HasTargetNeuron* pHasTargetNeuron = new HasTargetNeuron();
+        pHasTargetNeuron->SetFalseChild(new FindTargetNeuron(new ClosestTargetFinder(Actor::HOSTILE)));
+    
+
+        BooleanNeuron* pDistanceNeuron = new DistanceToTargetGreaterNeuron(2.0f);
+        pDistanceNeuron->SetTrueChild(new MoveToTargetNeuron());
+        pDistanceNeuron->SetFalseChild(new FireNeuron());
+        pHasTargetNeuron->SetTrueChild(pDistanceNeuron);
+        
+        Neuron* rootNeuron = pHasTargetNeuron;
+        
+        pBrain->SetRootNeuron(rootNeuron);
+        m_pRobot->SetBrain(pBrain);
         
         rWorld.AddActor(m_pRobot);
         

@@ -33,8 +33,8 @@ void BooleanNeuron::SetTrueChild(Neuron* pTrue)
     if (m_pTrue) 
     {
         delete m_pTrue;
-        m_pTrue = pTrue;
     }
+    m_pTrue = pTrue;
 }
 
 void BooleanNeuron::SetFalseChild(Neuron* pFalse)
@@ -42,24 +42,24 @@ void BooleanNeuron::SetFalseChild(Neuron* pFalse)
     if (m_pFalse) 
     {
         delete m_pFalse;
-        m_pFalse = pFalse;
     }
+    m_pFalse = pFalse;
 }
 
-void BooleanNeuron::Fire(Robot *pRobot, float dt) 
+void BooleanNeuron::Fire(Robot *pRobot) 
 {
     if (EvaluateCondition(pRobot))
     {
         if (m_pTrue) 
         {
-            m_pTrue->Fire(pRobot, dt);
+            m_pTrue->Fire(pRobot);
         }
     }
     else
     {
         if (m_pFalse)
         {
-            m_pFalse->Fire(pRobot, dt);
+            m_pFalse->Fire(pRobot);
         }
     }
 }

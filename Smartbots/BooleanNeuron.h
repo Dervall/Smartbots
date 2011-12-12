@@ -13,12 +13,12 @@
 
 class Robot;
 
-class BooleanNeuron : Neuron {
+class BooleanNeuron : public Neuron {
 public:
     BooleanNeuron();
     virtual ~BooleanNeuron();
     
-    virtual void Fire(Robot* pRobot, float dt);
+    virtual void Fire(Robot* pRobot);
     
     void SetTrueChild(Neuron* pTrue);
     void SetFalseChild(Neuron* pFalse);

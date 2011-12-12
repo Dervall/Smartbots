@@ -11,7 +11,10 @@
 #include "Body.h"
 #include "Head.h"
 #include "Arms.h"
+#include "Brain.h"
 #include "RobotConstants.h"
+#import "Isgl3dEvent3DDispatcher.h"
+#import "Isgl3dNode.h"
 
 Robot::Robot(Isgl3dNode* pNode) 
     : Actor(pNode)
@@ -44,10 +47,16 @@ void Robot::SetTarget(Actor *pTarget)
     m_pTarget = pTarget;
 }
 
+Actor* Robot::GetTarget() 
+{
+    return m_pTarget;
+}
+
 void Robot::Tic(float dt) {
     if (m_pBody) m_pBody->Tic(dt);
     if (m_pArms) m_pArms->Tic(dt);
     if (m_pHead) m_pHead->Tic(dt);
+    if (m_pBrain) m_pBrain->Tic(this, dt);
     
     Actor::Tic(dt);
 }
@@ -64,14 +73,22 @@ void Robot::LoadGeometry() {
     }
 }
 
-void Robot::SetArms(Arms* pArms) {
+void Robot::SetArms(Arms* pArms) 
+{
     m_pArms = pArms;
 }
 
-void Robot::SetBody(Body *pBody) {
+void Robot::SetBody(Body *pBody) 
+{
     m_pBody = pBody;
 }
 
-void Robot::SetHead(Head *pHead) {
+void Robot::SetHead(Head *pHead) 
+{
     m_pHead = pHead;
+}
+
+void Robot::SetBrain(Brain* pBrain) 
+{
+    m_pBrain = pBrain;
 }

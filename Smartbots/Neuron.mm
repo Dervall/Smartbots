@@ -17,6 +17,6 @@ Neuron::~Neuron()
 {
 }
 
-void Neuron::Fire(Robot* pRobot, float dt)
+void Neuron::Fire(Robot* pRobot)
 {
 }

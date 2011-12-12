@@ -24,6 +24,10 @@ Brain::~Brain() {
 void Brain::Tic(Robot* pRobot, float dt) {
     if (m_pRootNeuron)
     {
-        m_pRootNeuron->Fire(pRobot, dt);
+        m_pRootNeuron->Fire(pRobot);
     }
+}
+
+void Brain::SetRootNeuron(Neuron *pNeuron) {
+    m_pRootNeuron = pNeuron;
 }

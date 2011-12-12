@@ -16,12 +16,16 @@ FindTargetNeuron::FindTargetNeuron()
 {
 }
 
+FindTargetNeuron::FindTargetNeuron(TargetFinder* pFinder) {
+    m_pFinder = pFinder;
+}
+
 void FindTargetNeuron::SetTargetFinder(TargetFinder* pFinder)
 {
     m_pFinder = pFinder;
 }
 
-void FindTargetNeuron::Fire(Robot* pRobot, float dt) {
+void FindTargetNeuron::Fire(Robot* pRobot) {
     Actor* pTarget = m_pFinder->FindTarget(pRobot);
     pRobot->SetTarget(pTarget);
 }

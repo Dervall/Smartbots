@@ -28,11 +28,13 @@ public:
     void SetBody(Body* pBody);
     void SetHead(Head* pHead);
     void SetArms(Arms* pArm);
+    void SetBrain(Brain* pBrain);
     
     void LoadGeometry();
     
     virtual bool IsTargettable() const;
     void SetTarget(Actor* pTarget);
+    Actor* GetTarget();
     
 private:
     Brain* m_pBrain;

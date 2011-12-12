@@ -19,9 +19,13 @@ public:
     ~Brain();
     
     void Tic(Robot* pRobot, float dt);
-    
+
+    void SetRootNeuron(Neuron *pNeuron);
+
 private:
     Neuron* m_pRootNeuron;
+
+
 
 };
 
